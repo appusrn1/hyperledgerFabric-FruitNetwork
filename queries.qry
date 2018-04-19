@@ -1,0 +1,10 @@
+/**
+ * New query file
+ */
+
+query Q1 {
+    description: "Select All Fruits Of Owner"
+    statement:
+        SELECT org.acme.model.Fruit
+            WHERE ((_$name == name) AND (_$owner == owner))
+}
