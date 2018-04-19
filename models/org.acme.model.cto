@@ -1,0 +1,24 @@
+/**
+ * New model file
+ */
+
+namespace org.acme.model
+
+asset Fruit identified by id {
+  o String id
+  o String name
+  --> User owner
+  o Integer quantity
+}
+
+participant User identified by id {
+  o String id
+  o String name
+}
+  
+
+transaction Sell {
+--> User buyer
+--> Fruit fruit
+o Integer quantity
+}
